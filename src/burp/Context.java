@@ -28,7 +28,9 @@ public class Context {
     public static String getTempBatName(boolean reGet){
         if (tempBatName == null || reGet) {
             long ms = System.currentTimeMillis();
-            tempBatName = tempDir + "/" + ms + ".bat";
+            //tempBatName = tempDir + "/" + ms + ".bat";
+            String sepa= java.io.File.separator;
+            tempBatName = tempDir + sepa + ms + ".bat";
         }
         return tempBatName;
     }
